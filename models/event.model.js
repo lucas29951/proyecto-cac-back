@@ -41,8 +41,8 @@ Event.getAll = (result) => {
 
 Event.updateById = (id, event, result) => {
   db.query(
-    "UPDATE events SET titulo = ?, categoria = ?, fechaHora = ?, ubicacion = ?, descripcion = ?, precio = ?, imagen = ? WHERE id = ?",
-    [event.titulo, event.categoria, event.fechaHora, event.ubicacion, event.descripcion, event.precio, event.imagen, id],
+    "UPDATE events SET titulo = ?, fechaHora = ?, ubicacion = ?, descripcion = ?, precio = ?, imagen = ?, category_id = ? WHERE id = ?",
+    [event.titulo, event.fechaHora, event.ubicacion, event.descripcion, event.precio, event.imagen, event.category_id, id],
     (err, res) => {
       if (err) {
         console.log("error: ", err);
