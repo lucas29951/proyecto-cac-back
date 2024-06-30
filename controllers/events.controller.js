@@ -3,12 +3,12 @@ const Event = require('../models/event.model');
 exports.create = (req, res) => {
   const newEvent = {
     titulo: req.body.titulo,
-    categoria: req.body.categoria,
     fechaHora: req.body.fechaHora,
     ubicacion: req.body.ubicacion,
     descripcion: req.body.descripcion,
     precio: req.body.precio,
-    imagen: req.body.imagen
+    imagen: req.body.imagen,
+    category_id: req.body.category_id
   };
 
   Event.create(newEvent, (err, data) => {
@@ -49,12 +49,12 @@ exports.findOne = (req, res) => {
 exports.update = (req, res) => {
   const event = {
     titulo: req.body.titulo,
-    categoria: req.body.categoria,
     fechaHora: req.body.fechaHora,
     ubicacion: req.body.ubicacion,
     descripcion: req.body.descripcion,
     precio: req.body.precio,
-    imagen: req.body.imagen
+    imagen: req.body.imagen,
+    category_id: req.body.category_id
   };
 
   Event.updateById(req.params.id, event, (err, data) => {
