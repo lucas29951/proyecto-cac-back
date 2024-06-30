@@ -13,11 +13,15 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-const authRoutes = require('./routes/auth.routes');
+const userRoutes = require('./routes/users.routes');
 const eventRoutes = require('./routes/events.routes');
+const categoryRoutes = require('./routes/category.routes');
+const ticketRoutes = require('./routes/ticket.routes');
 
-app.use('/api/auth', authRoutes);
+app.use('/api/users', userRoutes);
 app.use('/api/events', eventRoutes);
+app.use('/api/categories', categoryRoutes);
+app.use('/api/tickets', ticketRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
