@@ -26,7 +26,7 @@ exports.findAll = (req, res) => {
       res.status(500).send({
         message: err.message || "Some error occurred while retrieving events."
       });
-    } else res.send(data);
+    } else res.json(data);
   });
 };
 
