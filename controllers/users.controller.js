@@ -52,3 +52,9 @@ exports.login = (req, res) => {
     }
   });
 };
+
+exports.logout = (req, res) => {
+  res.status(200).send({
+    message: "User logged out successfully."
+  });
+};
