@@ -4,6 +4,11 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv');
 
+const userRoutes = require('./routes/users.routes');
+const eventRoutes = require('./routes/events.routes');
+const categoryRoutes = require('./routes/category.routes');
+const ticketRoutes = require('./routes/ticket.routes');
+
 dotenv.config();
 
 const app = express();
@@ -14,11 +19,6 @@ app.use(cors({
 }));
 app.use(bodyParser.json());
 app.use(cookieParser());
-
-const userRoutes = require('./routes/users.routes');
-const eventRoutes = require('./routes/events.routes');
-const categoryRoutes = require('./routes/category.routes');
-const ticketRoutes = require('./routes/ticket.routes');
 
 app.use('/api/users', userRoutes);
 app.use('/api/events', eventRoutes);
