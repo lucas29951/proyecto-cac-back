@@ -42,13 +42,6 @@ exports.login = (req, res) => {
       const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
         expiresIn: 86400 // 24 horas
       });
-
-      // res.status(200).send({
-      //   id: user.id,
-      //   username: user.username,
-      //   email: user.email,
-      //   accessToken: token
-      // });
       res.json({
         id: user.id,
         username: user.username,
