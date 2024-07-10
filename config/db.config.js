@@ -6,7 +6,7 @@ const db = mysql.createConnection({
     user: process.env.DB_USER || 'root',
     password: process.env.DB_PASSWORD || '',
     database: process.env.DB_NAME || 'eventickets_db',
-    port: process.env.DB_PORT || 3308,
+    // port: process.env.DB_PORT || 3308,
 });
 
 db.connect(error => {
