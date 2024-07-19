@@ -7,7 +7,8 @@ exports.create = (req, res) => {
     ubicacion: req.body.ubicacion,
     descripcion: req.body.descripcion,
     precio: req.body.precio,
-    imagen: req.file ? `/uploads/${req.file.filename}` : '',
+    // imagen: req.file ? `/uploads/${req.file.filename}` : '',
+    imagen: req.body.imagen,
     category_id: req.body.category_id
   };
 
