@@ -54,7 +54,8 @@ exports.update = (req, res) => {
     ubicacion: req.body.ubicacion,
     descripcion: req.body.descripcion,
     precio: req.body.precio,
-    imagen: req.file ? `/uploads/${req.file.filename}` : req.body.imagen,
+    // imagen: req.file ? `/uploads/${req.file.filename}` : req.body.imagen,
+    imagen: req.body.imagen,
     category_id: req.body.category_id
   };
 
