@@ -59,14 +59,6 @@ exports.update = (req, res) => {
     category_id: req.body.category_id
   };
 
-  console.log("Titulo: " + event.titulo);
-  console.log("Categoria: " + event.category_id);
-  console.log("Fecha y Hora: " + event.fechaHora);
-  console.log("Ubicacion: " + event.ubicacion);
-  console.log("Descripcion: " + event.descripcion);
-  console.log("Precio: " + event.precio);
-  console.log("Imagen: " + event.imagen);
-
   Event.updateById(req.params.id, event, (err, data) => {
     if (err) {
       if (err.kind === "not_found") {
